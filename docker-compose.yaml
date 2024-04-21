@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  mays-db-dev:
+    container_name: mays-db-dev-container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: maysDevUser
+      POSTGRES_PASSWORD : Passw0rd
+      POSTGRES_DB: MAYS_DEV
+      PGDATA: /var/lib/postgresql/data
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
+    ports:
+      - "5435:5432"

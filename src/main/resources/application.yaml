@@ -1,0 +1,21 @@
+security:
+  jwt:
+    secret: '"qweasdzxcrtyfghvbnuhojklmklkjofhqweasdzxcrtyfghvbnulojklmklkjofh"'
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: Passw0rd
+    url: jdbc:postgresql://localhost:5435/MAYS_DEV
+    username: maysDevUser
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  security:
+    user:
+      name: admin
+      password: root
